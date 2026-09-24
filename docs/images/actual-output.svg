@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Contact center simulator actual local output</title>
+  <desc id="desc">The local simulator routed a synthetic delivery-status call and produced a short extractive summary without placing a real call or contacting AWS.</desc>
+  <rect width="1200" height="600" rx="20" fill="#0b1115"/>
+  <rect x="1" y="1" width="1198" height="58" rx="19" fill="#182329"/>
+  <circle cx="30" cy="30" r="7" fill="#ff6b63"/><circle cx="54" cy="30" r="7" fill="#ffc04f"/><circle cx="78" cy="30" r="7" fill="#36c98f"/>
+  <text x="108" y="37" fill="#dbe6e8" font-family="Consolas,monospace" font-size="18">contact-center-voice-automation · local demo</text>
+  <text x="76" y="104" fill="#84a4aa" font-family="Consolas,monospace" font-size="15" letter-spacing="2">ACTUAL LOCAL OUTPUT · SYNTHETIC TRANSCRIPT</text>
+  <rect x="76" y="133" width="1048" height="108" rx="12" fill="#12211d" stroke="#2c5147"/>
+  <text x="102" y="178" fill="#9cdbb5" font-family="Consolas,monospace" font-size="22" font-weight="700">status=ROUTED</text>
+  <text x="102" y="215" fill="#b9c8cc" font-family="Consolas,monospace" font-size="18">provider=local-simulator   ·   summary_mode=local-extractive</text>
+  <text x="76" y="299" fill="#84a4aa" font-family="Consolas,monospace" font-size="15" letter-spacing="2">SYNTHETIC DELIVERY-STATUS CONVERSATION</text>
+  <rect x="76" y="328" width="1048" height="190" rx="12" fill="#121c20" stroke="#2a3b42"/>
+  <text x="102" y="374" fill="#79b8ff" font-family="Consolas,monospace" font-size="18" font-weight="700">CUSTOMER</text>
+  <text x="252" y="374" fill="#d6e0e3" font-family="Consolas,monospace" font-size="17">I cannot see the delivery status for order 42.</text>
+  <text x="102" y="416" fill="#9cdbb5" font-family="Consolas,monospace" font-size="18" font-weight="700">AGENT</text>
+  <text x="252" y="416" fill="#d6e0e3" font-family="Consolas,monospace" font-size="17">The carrier scan was delayed, but the parcel is due tomorrow.</text>
+  <text x="102" y="458" fill="#79b8ff" font-family="Consolas,monospace" font-size="18" font-weight="700">CUSTOMER</text>
+  <text x="252" y="458" fill="#d6e0e3" font-family="Consolas,monospace" font-size="17">Please send me the tracking link.</text>
+  <text x="76" y="562" fill="#7f979d" font-family="Consolas,monospace" font-size="15">No call was placed · no transcript data was sent to AWS</text>
+</svg>

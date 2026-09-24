@@ -36,6 +36,8 @@ All local state is in memory and is bounded by `HISTORY_LIMIT` (default `1000`).
 
 ### Actual local output
 
+![Image preview of the actual local voice-routing simulator output using synthetic transcript text](docs/images/actual-output.svg)
+
 The simulator was exercised with a synthetic delivery-status call and transcript. It returned:
 
 ```text
