@@ -1,0 +1,6 @@
+aws_region             = "us-east-1"
+connect_instance_id    = "00000000-0000-0000-0000-000000000000"
+contact_flow_id        = "11111111-1111-1111-1111-111111111111"
+source_phone_number    = "+12145550123"
+transcript_bucket_name = "replace-with-a-globally-unique-bucket-name"
+bedrock_model_id       = ""

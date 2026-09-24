@@ -1,0 +1,8 @@
+{
+  "Transcript": [
+    {"participantRole": "CUSTOMER", "content": "I cannot see the delivery status for order 42."},
+    {"participantRole": "AGENT", "content": "The carrier scan was delayed, but the parcel is due tomorrow."},
+    {"participantRole": "CUSTOMER", "content": "Please send me the tracking link."},
+    {"participantRole": "AGENT", "content": "I sent the link by text and will follow up if no scan appears by noon."}
+  ]
+}
