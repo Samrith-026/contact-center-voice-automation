@@ -34,6 +34,20 @@ Useful endpoints:
 
 All local state is in memory and is bounded by `HISTORY_LIMIT` (default `1000`). It clears when the container stops.
 
+### Actual local output
+
+The simulator was exercised with a synthetic delivery-status call and transcript. It returned:
+
+```text
+status=ROUTED
+provider=local-simulator
+summary_mode=local-extractive
+
+CUSTOMER: I cannot see the delivery status for order 42. AGENT: The carrier scan was delayed, but the parcel is due tomorrow. CUSTOMER: Please send me the tracking link.
+```
+
+This is a local sample output; the simulator did not place a call or contact AWS.
+
 ## Optional AWS deployment
 
 This path can initiate real outbound calls and process customer transcripts. Use a development account and test destination numbers. Amazon Connect, Bedrock, S3, Lambda, and CloudWatch may incur charges; Bedrock model access may require separate enablement.
