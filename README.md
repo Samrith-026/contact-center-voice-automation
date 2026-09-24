@@ -8,17 +8,7 @@ A local contact-center simulator and optional AWS workflow for outbound call rou
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    O[Authenticated operator] --> L[Call launcher Lambda]
-    L --> C[Existing Amazon Connect flow]
-    C --> S3[S3 transcripts prefix]
-    S3 --> T[Summarizer Lambda]
-    T -->|optional| B[Amazon Bedrock]
-    T --> S2[S3 summaries prefix]
-    T --> CW[CloudWatch metrics and logs]
-    T -. failures .-> DLQ[Encrypted SQS queue]
-```
+![Architecture preview: authenticated call launch through an existing Amazon Connect flow, private S3 transcripts, Lambda summaries, optional Bedrock, CloudWatch, and encrypted SQS failure handling](docs/images/architecture.svg)
 
 Terraform supplies the launcher and summarizer functions. The Amazon Connect instance, claimed source phone number, and published contact flow are prerequisites that you provide. This repository does not configure a public call-launch API.
 
@@ -103,4 +93,3 @@ GitHub Actions runs the unit tests, initializes and validates Terraform, checks 
 - Use synthetic or approved test transcripts in demonstrations. Do not commit production transcripts or personal customer data.
 
 See [RUNBOOK.md](./RUNBOOK.md) for triage and recovery.
-

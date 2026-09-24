@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud contact center and voice automation architecture</title>
+  <desc id="desc">An authenticated workflow invokes a call-launch Lambda and an existing Amazon Connect contact flow. Transcripts are written to a private encrypted S3 prefix, which triggers a summarizer Lambda. The Lambda optionally calls Bedrock, writes summaries to a separate prefix, publishes CloudWatch metrics, and routes failures to an encrypted SQS dead-letter queue.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7892ad"/></marker>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#101d2c"/><stop offset="1" stop-color="#0b1420"/></linearGradient>
+    <style>text{font-family:Arial,sans-serif}.box{fill:#172a3d;stroke:#395674;stroke-width:2}.compute{fill:#293151;stroke:#8f9aff}.store{fill:#173b3c;stroke:#4bc4a6}.optional{fill:#3b2b20;stroke:#dda35e}.label{fill:#eff5fb;font-size:19px;font-weight:700}.small{fill:#aabbd0;font-size:14px}.path{fill:none;stroke:#7892ad;stroke-width:3;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1200" height="640" rx="28" fill="url(#bg)"/>
+  <text x="56" y="62" fill="#f5f8fc" font-size="27" font-weight="700">CONTACT CENTER &amp; VOICE AUTOMATION</text>
+  <text x="56" y="92" fill="#9fb0c3" font-size="15">Local simulator · optional AWS workflow · private transcript processing</text>
+  <rect class="box" x="45" y="200" width="165" height="115" rx="16"/><text class="label" x="127" y="247" text-anchor="middle">Operator</text><text class="small" x="127" y="276" text-anchor="middle">authenticated workflow</text>
+  <rect class="compute" x="270" y="185" width="200" height="145" rx="16"/><text class="label" x="370" y="235" text-anchor="middle">Call launcher</text><text class="small" x="370" y="265" text-anchor="middle">Lambda</text><text class="small" x="370" y="290" text-anchor="middle">E.164 validation</text>
+  <rect class="box" x="530" y="185" width="205" height="145" rx="16"/><text class="label" x="632" y="235" text-anchor="middle">Amazon Connect</text><text class="small" x="632" y="265" text-anchor="middle">existing published</text><text class="small" x="632" y="290" text-anchor="middle">contact flow</text>
+  <path class="path" d="M210 257H262"/><path class="path" d="M470 257H522"/>
+  <rect class="store" x="800" y="175" width="165" height="100" rx="16"/><text class="label" x="882" y="218" text-anchor="middle">Private S3</text><text class="small" x="882" y="247" text-anchor="middle">transcripts/</text>
+  <rect class="compute" x="800" y="360" width="165" height="120" rx="16"/><text class="label" x="882" y="405" text-anchor="middle">Summarizer</text><text class="small" x="882" y="434" text-anchor="middle">Lambda</text><text class="small" x="882" y="457" text-anchor="middle">extract / enrich</text>
+  <path class="path" d="M735 250H792"/><path class="path" d="M882 275V352"/>
+  <rect class="optional" x="1010" y="185" width="150" height="100" rx="16"/><text class="label" x="1085" y="228" text-anchor="middle">Bedrock</text><text class="small" x="1085" y="255" text-anchor="middle">optional model</text>
+  <path d="M965 394C1020 394 1028 320 1084 293" fill="none" stroke="#dda35e" stroke-width="2.5" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+  <rect class="store" x="535" y="405" width="195" height="95" rx="16"/><text class="label" x="632" y="447" text-anchor="middle">Private S3</text><text class="small" x="632" y="476" text-anchor="middle">summaries/</text>
+  <path class="path" d="M800 430H738"/>
+  <rect class="optional" x="1010" y="390" width="150" height="95" rx="16"/><text class="label" x="1085" y="429" text-anchor="middle">Encrypted SQS</text><text class="small" x="1085" y="457" text-anchor="middle">failure queue</text>
+  <path d="M965 455H1002" fill="none" stroke="#dda35e" stroke-width="2.5" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+  <text x="56" y="570" fill="#879bb1" font-size="14">Existing Connect instance, claimed source number, and published contact flow are prerequisites.</text>
+</svg>
